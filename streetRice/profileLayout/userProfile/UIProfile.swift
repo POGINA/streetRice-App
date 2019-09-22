@@ -39,8 +39,11 @@ import UIKit
     navView.anchor(top: headerImageBackground.bottomAnchor, left: headerImageBackground.leftAnchor, right: headerImageBackground.rightAnchor, paddingTop: 5, height: 40)
     
     // UICollection view layout for visited
-    view.addSubview(viewCollection)
-    viewCollection.anchor(top: navView.bottomAnchor, left: navView.leftAnchor, right: navView.rightAnchor, paddingTop: 5, height: 215)
+    view.addSubview(visitedViewCollectionCell)
+    visitedViewCollectionCell.anchor(top: navView.bottomAnchor, left: navView.leftAnchor, right: navView.rightAnchor, paddingTop: 5, paddingLeft: 15, height: 130)
+    
+    view.addSubview(picturesTakenViewCollectionCell)
+    picturesTakenViewCollectionCell.anchor(top: visitedViewCollectionCell.bottomAnchor, left: visitedViewCollectionCell.leftAnchor, right: visitedViewCollectionCell.rightAnchor, paddingTop: 5, height: 299)
     
     return view
 }()

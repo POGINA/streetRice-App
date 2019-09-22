@@ -12,7 +12,7 @@ import UIKit
  let headerImageBackground: UIImageView = {
     let bImage = UIImageView()
     bImage.image = #imageLiteral(resourceName: "food5")
-    bImage.alpha = 0.7
+    bImage.alpha = 0.9
     bImage.contentMode = .scaleAspectFill
     bImage.clipsToBounds = true
     return bImage
@@ -191,15 +191,28 @@ let Bookmarks: UIButton = {
 // ** ==========================================
 
 // UICollection View ============================
-let viewCollection: UICollectionView = {
+let visitedViewCollectionCell: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
     let collection = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
     layout.scrollDirection = .horizontal
+    collection.showsHorizontalScrollIndicator = false
     collection.backgroundColor = UIColor.white
     collection.translatesAutoresizingMaskIntoConstraints = false
     collection.isScrollEnabled = true
     
     return collection
+}()
+
+let picturesTakenViewCollectionCell: UICollectionView = {
+    let layout = UICollectionViewFlowLayout()
+    let picturesCell = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
+    layout.scrollDirection = .horizontal
+    picturesCell.showsHorizontalScrollIndicator = false
+    picturesCell.backgroundColor = UIColor.white
+    picturesCell.translatesAutoresizingMaskIntoConstraints = false
+    picturesCell.isScrollEnabled = true
+    
+    return picturesCell
 }()
 
 

@@ -53,28 +53,4 @@ public extension UIView {
     }
 }
 
-extension viewController: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageData.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = viewCollection.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! customCell
-        cell.imageView.image = imageData[indexPath.item]
-        cell.textLabel.text = labelData[indexPath.item]
-        cell.backgroundColor = .darkGray
-        cell.layer.cornerRadius = 5
-        cell.layer.shadowOpacity = 0.8
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: 150, height: 200)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
-    }
-}
+
