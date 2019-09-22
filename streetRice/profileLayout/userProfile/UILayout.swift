@@ -11,7 +11,7 @@ import UIKit
 // header images ===============================
  let headerImageBackground: UIImageView = {
     let bImage = UIImageView()
-    bImage.image = #imageLiteral(resourceName: "streetfood-2")
+    bImage.image = #imageLiteral(resourceName: "food5")
     bImage.alpha = 0.7
     bImage.contentMode = .scaleAspectFill
     bImage.clipsToBounds = true
@@ -195,7 +195,7 @@ let viewCollection: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
     let collection = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
     layout.scrollDirection = .horizontal
-    collection.backgroundColor = UIColor.gray
+    collection.backgroundColor = UIColor.white
     collection.translatesAutoresizingMaskIntoConstraints = false
     collection.isScrollEnabled = true
     

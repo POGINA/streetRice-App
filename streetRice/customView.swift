@@ -83,3 +83,54 @@ import UIKit
 //    }
 //}
 
+class customCell: UICollectionViewCell {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUp()
+    }
+    
+    let imageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFill
+        image.clipsToBounds = true
+        image.backgroundColor = UIColor.red
+        image.layer.cornerRadius = 5
+        image.layer.opacity = 0.7
+        
+        return image
+    }()
+    
+    let textLabel: UILabel = {
+        let text = UILabel()
+        text.translatesAutoresizingMaskIntoConstraints = false
+        text.textAlignment = .center
+        text.textColor = .white
+        
+        return text
+    }()
+
+    
+    func setUp(){
+        addSubview(imageView)
+        addSubview(textLabel)
+        
+        
+        imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        
+        textLabel.anchor(top: topAnchor, left: leftAnchor, paddingLeft: 10)
+        
+//        textLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        textLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5).isActive = true
+        textLabel.heightAnchor.constraint(equalToConstant: 15).isActive = true
+//        textLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}

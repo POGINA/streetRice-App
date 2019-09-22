@@ -40,7 +40,7 @@ import UIKit
     
     // UICollection view layout for visited
     view.addSubview(viewCollection)
-    viewCollection.anchor(top: navView.bottomAnchor, left: navView.leftAnchor, right: navView.rightAnchor, paddingTop: 5, height: 400)
+    viewCollection.anchor(top: navView.bottomAnchor, left: navView.leftAnchor, right: navView.rightAnchor, paddingTop: 5, height: 215)
     
     return view
 }()
