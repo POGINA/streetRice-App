@@ -21,12 +21,14 @@ extension viewController: UICollectionViewDataSource,UICollectionViewDelegate,UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == visitedViewCollectionCell {
-            let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifierA, for: indexPath) as UICollectionViewCell as! customCell
+            let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifierA, for: indexPath) as
+                UICollectionViewCell as! customCell
             
                 cellA.visitedImages.image = picturesTakenData[indexPath.item]
                 cellA.textLabel.text = labelData[indexPath.item]
                 cellA.locationName.text = locationDataName[indexPath.item]
                 cellA.backgroundColor = .clear
+            
                 cellA.layer.cornerRadius = 5
             // Set up cell
             return cellA
@@ -35,9 +37,10 @@ extension viewController: UICollectionViewDataSource,UICollectionViewDelegate,UI
             let cellB = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifierB, for: indexPath) as UICollectionViewCell as! customCell
             
                 cellB.picturesTaken.image = imageData[indexPath.item]
-                cellB.menuName.text = menuLabel[indexPath.item]
-                cellB.backgroundColor = .clear
-                cellB.layer.shadowOpacity = 0.5
+                cellB.likes.text = likes[indexPath.item]
+                cellB.comments.text = comments[indexPath.item]
+//                cellB.backgroundColor = .green
+//                cellB.layer.shadowOpacity = 0.5
                 cellB.layer.cornerRadius = 5
             
             // ...Set up cell
@@ -51,12 +54,13 @@ extension viewController: UICollectionViewDataSource,UICollectionViewDelegate,UI
         
         if collectionView == visitedViewCollectionCell {
 
-            return CGSize(width: 150, height: 200)
+            return CGSize(width: 235, height: 200)
+
         }
         else {
 
             
-            return CGSize(width: 310, height: 298)
+            return CGSize(width: 340, height: 270)
         }
     }
     

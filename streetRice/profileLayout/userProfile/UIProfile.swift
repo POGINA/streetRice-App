@@ -6,7 +6,7 @@ import UIKit
 
  var headerView: UIView = {
     let view = UIView()
-    
+    view.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
     // header image
     view.addSubview(headerImageBackground)
     headerImageBackground.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor , height: 230)
@@ -38,12 +38,21 @@ import UIKit
     view.addSubview(navView)
     navView.anchor(top: headerImageBackground.bottomAnchor, left: headerImageBackground.leftAnchor, right: headerImageBackground.rightAnchor, paddingTop: 5, height: 40)
     
+    // visited text label
+    view.addSubview(visitedTextLabel)
+    visitedTextLabel.anchor(top: navView.bottomAnchor, left: view.leftAnchor, paddingLeft: 30)
+    
     // UICollection view layout for visited
     view.addSubview(visitedViewCollectionCell)
-    visitedViewCollectionCell.anchor(top: navView.bottomAnchor, left: navView.leftAnchor, right: navView.rightAnchor, paddingTop: 5, paddingLeft: 15, height: 130)
-    
+    visitedViewCollectionCell.anchor(top: navView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 12, paddingLeft: 15, height: 130)
+
+    // UICollection view layout for pictures taken
     view.addSubview(picturesTakenViewCollectionCell)
-    picturesTakenViewCollectionCell.anchor(top: visitedViewCollectionCell.bottomAnchor, left: visitedViewCollectionCell.leftAnchor, right: visitedViewCollectionCell.rightAnchor, paddingTop: 5, height: 299)
+    picturesTakenViewCollectionCell.anchor(top: visitedViewCollectionCell.bottomAnchor, left: navView.leftAnchor, right: headerImageBackground.rightAnchor,paddingTop: 25, height: 299)
+    
+    // text label for photos taken
+    view.addSubview(photosTakenLabel)
+    photosTakenLabel.anchor(left: picturesTakenViewCollectionCell.leftAnchor, bottom: picturesTakenViewCollectionCell.topAnchor, paddingLeft: 30)
     
     return view
 }()

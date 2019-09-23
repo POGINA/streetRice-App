@@ -10,8 +10,9 @@
 		D53AB8AE2334E9710063636D /* UIProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53AB8AD2334E9710063636D /* UIProfile.swift */; };
 		D53AB8B2233541190063636D /* ExtensionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53AB8B1233541190063636D /* ExtensionsFile.swift */; };
 		D53AB8B82335EDAE0063636D /* UILayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53AB8B72335EDAE0063636D /* UILayout.swift */; };
-		D53AB8BB23369CCD0063636D /* customView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53AB8BA23369CCD0063636D /* customView.swift */; };
+		D53AB8BB23369CCD0063636D /* customCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53AB8BA23369CCD0063636D /* customCollectionView.swift */; };
 		D53AB8BD2336AF530063636D /* extensionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53AB8BC2336AF530063636D /* extensionVC.swift */; };
+		D53AB8FB233897E10063636D /* customTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53AB8FA233897E10063636D /* customTableView.swift */; };
 		D576AC0A232E0F9B0023DA5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576AC09232E0F9B0023DA5B /* AppDelegate.swift */; };
 		D576AC0C232E0F9B0023DA5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576AC0B232E0F9B0023DA5B /* ViewController.swift */; };
 		D576AC0F232E0F9B0023DA5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D576AC0D232E0F9B0023DA5B /* Main.storyboard */; };
@@ -25,8 +26,9 @@
 		D53AB8AD2334E9710063636D /* UIProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProfile.swift; sourceTree = "<group>"; };
 		D53AB8B1233541190063636D /* ExtensionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsFile.swift; sourceTree = "<group>"; };
 		D53AB8B72335EDAE0063636D /* UILayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILayout.swift; sourceTree = "<group>"; };
-		D53AB8BA23369CCD0063636D /* customView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customView.swift; sourceTree = "<group>"; };
+		D53AB8BA23369CCD0063636D /* customCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCollectionView.swift; sourceTree = "<group>"; };
 		D53AB8BC2336AF530063636D /* extensionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionVC.swift; sourceTree = "<group>"; };
+		D53AB8FA233897E10063636D /* customTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTableView.swift; sourceTree = "<group>"; };
 		D576AC06232E0F9B0023DA5B /* streetRice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = streetRice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D576AC09232E0F9B0023DA5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D576AC0B232E0F9B0023DA5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				D53AB8BC2336AF530063636D /* extensionVC.swift */,
-				D53AB8BA23369CCD0063636D /* customView.swift */,
+				D53AB8BA23369CCD0063636D /* customCollectionView.swift */,
 			);
 			path = customView;
 			sourceTree = "<group>";
@@ -87,6 +89,7 @@
 		D576ABFD232E0F9B0023DA5B = {
 			isa = PBXGroup;
 			children = (
+				D53AB8FA233897E10063636D /* customTableView.swift */,
 				D576AC08232E0F9B0023DA5B /* streetRice */,
 				D576AC07232E0F9B0023DA5B /* Products */,
 			);
@@ -206,12 +209,13 @@
 			files = (
 				D53AB8B2233541190063636D /* ExtensionsFile.swift in Sources */,
 				D53AB8B82335EDAE0063636D /* UILayout.swift in Sources */,
+				D53AB8FB233897E10063636D /* customTableView.swift in Sources */,
 				D576AC0C232E0F9B0023DA5B /* ViewController.swift in Sources */,
 				D53AB8BD2336AF530063636D /* extensionVC.swift in Sources */,
 				D576AC0A232E0F9B0023DA5B /* AppDelegate.swift in Sources */,
 				D53AB8AE2334E9710063636D /* UIProfile.swift in Sources */,
 				D5FBE7B32332910B0064F8A5 /* SignUpViewController.swift in Sources */,
-				D53AB8BB23369CCD0063636D /* customView.swift in Sources */,
+				D53AB8BB23369CCD0063636D /* customCollectionView.swift in Sources */,
 				D5FBE7B123319A850064F8A5 /* DesignableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

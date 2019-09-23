@@ -36,6 +36,7 @@ let profileImageview: UIImageView = {
 // username ====================================
 let user: UILabel = {
     let user = UILabel()
+    user.adjustsFontSizeToFitWidth = true
     user.font = UIFont.preferredFont(forTextStyle: .footnote)
     user.textColor = .white
     user.textAlignment = .center
@@ -53,7 +54,6 @@ let modalButton: UIButton = {
     let button = UIButton(type: .system)
     button.setImage(#imageLiteral(resourceName: "listIcon").withRenderingMode(.alwaysTemplate), for: .normal)
     button.tintColor = UIColor.white
-    
     return button
 }()
 
@@ -72,56 +72,56 @@ let editPage: UIButton = {
 }()
 
 let statusView: UIStackView = {
-    
     let view = UIStackView(arrangedSubviews: [Fallowers,Visited,reviews,photos])
     view.backgroundColor = .green
     view.translatesAutoresizingMaskIntoConstraints = false
     view.axis = .vertical
     view.spacing = 13
-//    view.alpha = 0.9
     view.distribution = .fill
-    
-    
     return view
 }()
 
 //  fallowers label ============================
 let Fallowers: UILabel = {
     let fallowers = UILabel()
+    fallowers.adjustsFontSizeToFitWidth = true
     fallowers.font = UIFont(name:"FontAwesome", size:10)
     fallowers.textColor = .white
     fallowers.textAlignment = .center
-    fallowers.text = "Fallowers"
+    fallowers.text = "fallowers"
     return fallowers
 }()
 
 // scanned =====================================
 let Visited: UILabel = {
     let Visited = UILabel()
+    Visited.adjustsFontSizeToFitWidth = true
     Visited.font = UIFont(name:"FontAwesome", size:10)
     Visited.textAlignment = .center
     Visited.textColor = .white
-    Visited.text = "Scanned"
+    Visited.text = "visited"
     return Visited
 }()
 
 // reviews =====================================
 let reviews: UILabel = {
     let reviews = UILabel()
+    reviews.adjustsFontSizeToFitWidth = true
     reviews.font = UIFont(name:"FontAwesome", size:10)
     reviews.textAlignment = .center
     reviews.textColor = .white
-    reviews.text = "Reviews"
+    reviews.text = "reviews"
     return reviews
 }()
 
 // reviews ======================================
 let photos: UILabel = {
     let photos = UILabel()
+    photos.adjustsFontSizeToFitWidth = true
     photos.font = UIFont(name:"FontAwesome", size:10)
     photos.textAlignment = .center
     photos.textColor = .white
-    photos.text = "Photos"
+    photos.text = "photos"
     return photos
 }()
 
@@ -138,8 +138,6 @@ let navView: UIStackView = {
     view.spacing = 0
     view.alpha = 0.9
     view.distribution = .fillEqually
-    
-    
     return view
 }()
 
@@ -149,7 +147,6 @@ let Reviews: UIButton = {
     Reviews.setTitle("Reviews", for: .normal)
     Reviews.tintColor = UIColor.darkGray
     Reviews.backgroundColor = .white
-    
     return Reviews
 }()
 
@@ -167,7 +164,6 @@ let Invite: UIButton = {
     let Invite = UIButton(type:.system)
     Invite.widthAnchor.constraint(equalToConstant: 100).isActive = true
     Invite.heightAnchor.constraint(equalToConstant: 25).isActive = true
-    //    Invite.layer.cornerRadius = 5
     Invite.setTitle("Invites", for: .normal)
     Invite.tintColor = UIColor.darkGray
     Invite.backgroundColor = .white
@@ -178,7 +174,6 @@ let Bookmarks: UIButton = {
     let Bookmarks = UIButton(type:.system)
     Bookmarks.widthAnchor.constraint(equalToConstant: 100).isActive = true
     Bookmarks.anchor( paddingLeft: 200)
-    //    Bookmarks.layer.cornerRadius = 5
     Bookmarks.setTitle("Bookmarks", for: .normal)
     Bookmarks.tintColor = UIColor.darkGray
     Bookmarks.backgroundColor = .white
@@ -199,20 +194,55 @@ let visitedViewCollectionCell: UICollectionView = {
     collection.backgroundColor = UIColor.white
     collection.translatesAutoresizingMaskIntoConstraints = false
     collection.isScrollEnabled = true
-    
     return collection
 }()
 
+//  visited text under navbar
+let visitedTextLabel: UILabel = {
+    let text = UILabel()
+    text.adjustsFontSizeToFitWidth = true
+    text.font = UIFont(name:"HelveticaNeue-Bold", size: 12.0)
+    text.font = text.font.withSize(10)
+    text.textAlignment = .center
+    text.textColor = UIColor.darkGray
+    text.text = "VISITED"
+    return text
+}()
+
+// UICollection View ============================
 let picturesTakenViewCollectionCell: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
     let picturesCell = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
-    layout.scrollDirection = .horizontal
+    
+    layout.scrollDirection = .vertical
     picturesCell.showsHorizontalScrollIndicator = false
     picturesCell.backgroundColor = UIColor.white
     picturesCell.translatesAutoresizingMaskIntoConstraints = false
     picturesCell.isScrollEnabled = true
-    
     return picturesCell
 }()
 
+// photos taken text under second UICollection view
+let photosTakenLabel: UILabel = {
+    let text = UILabel()
+    text.adjustsFontSizeToFitWidth = true
+    text.font = UIFont(name:"HelveticaNeue-Bold", size: 12.0)
+    text.font = text.font.withSize(10)
+    text.textAlignment = .center
+    text.textColor = UIColor.darkGray
+    text.text = "PHOTOS TAKEN"
+    return text
+}()
+
+let horizontalViewCollection: UICollectionView = {
+    let layout = UICollectionViewFlowLayout()
+    let horizontalLayout = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
+    
+    layout.scrollDirection = .vertical
+    horizontalLayout.showsHorizontalScrollIndicator = false
+    horizontalLayout.backgroundColor = UIColor.white
+    horizontalLayout.translatesAutoresizingMaskIntoConstraints = false
+    horizontalLayout.isScrollEnabled = true
+    return horizontalLayout
+}()
 
